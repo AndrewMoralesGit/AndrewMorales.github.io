@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzas El Mijín</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pizzas El Mijín</h1>
+        <nav>
+            <ul>
+                <li><a href="#cart" id="cart-icon">🛒 Carrito (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Menú de Pizzas</h2>
+            <div class="pizza" data-name="Pizza Margherita" data-price="8">
+                <img src="img/menu1.webp" alt="Pizza Margherita">
+                <h3>Pizza Clásica </h3>
+                <p><strong>3.50cm.</strong></p>
+                <p>Tomate, mozzarella y albahaca.</p>
+                <p>Precio: $3.5</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+            <div class="pizza" data-name="Pizza Pepperoni" data-price="10">
+                <img src="img/menu2.png" alt="Pizza Pepperoni">
+                <h3>Pizza Clásica</h3>
+                <p><strong>3.50cm.</strong></p>
+                <p>Pepperoni, mozzarella y salsa de tomate.</p>
+                <p>Precio: $10</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+            <div class="pizza" data-name="Pizza Cuatro Quesos" data-price="12">
+                <img src="img/menu3.webp" alt="Pizza Cuatro Quesos">
+                <h3>Pizza Clásica</h3>
+                <p><strong>3.50cm.</strong></p>
+                <p>Mezcla de cuatro quesos.</p>
+                <p>Precio: $12</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal del Carrito -->
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: $0</p>
+            <button id="checkout">Finalizar Pedido</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pizzería El Mijín. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

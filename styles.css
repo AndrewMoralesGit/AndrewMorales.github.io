@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    background-color: #f05729e5;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Para posicionar el carrito */
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+#cart-icon {
+    position: absolute; /* Posiciona el carrito en la esquina superior derecha */
+    right: 20px;
+    top: 20px;
+    font-size: 1.5em; /* Tamaño del ícono */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#menu, #cart {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Limitar el ancho máximo */
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pizza {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pizza img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+button {
+    background: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80%; /* Botón ocupa todo el ancho */
+    margin-top: 10px; /* Espacio entre el botón y el texto */
+}
+
+button:hover {
+    background: #e5533d;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #ff6347;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* Estilos para el modal */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-content button {
+    width: 100%;
+}
+
+.modal-content ul {
+    list-style: none;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Cambiar a bloque para móviles */
+        margin: 10px 0; /* Espacio entre elementos */
+    }
+
+    #menu, #cart {
+        padding: 10px; /* Menos padding en móviles */
+    }
+
+    button {
+        padding: 15px; /* Botón más grande en móviles */
+    }
+}
+
+/* Ocultar el carrito por defecto */
+.hidden {
+    display: none;
+}
