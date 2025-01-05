@@ -56,7 +56,7 @@ document.getElementById('checkout').addEventListener('click', () => {
 
     const orderDetails = cart.map(item => `${item.name} - $${item.price.toFixed(2)}`).join('%0A');
     const message = `Hola, quiero hacer un pedido:%0A${orderDetails}%0ATotal: $${total.toFixed(2)}`;
-    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`; // Reemplaza 1234567890 con el número de WhatsApp de la pizzería
+    const whatsappUrl = `https://wa.me/+584129272564?text=${encodeURIComponent(message)}`; // Reemplaza 1234567890 con el número de WhatsApp de la pizzería
 
     window.open(whatsappUrl, '_blank');
 });
